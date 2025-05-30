@@ -1,217 +1,135 @@
-//Questão 1
+//Questão 1. Desenvolver um programa que pergunte o valor da conta a ser paga no restaurante e 
+//exiba como resposta o valor com o acréscimo dos 10% da gorjeta do garçom
 
-function idade() {
+function gorjetaGarçom(){
+let valorConta = parseFloat(prompt("Digite o valor total da conta"));
+let gorjeta = (valorConta + (valorConta * 0.1));
 
-    let idades = parseInt(prompt("Digite sua idade"));
-
-    if (idades < 12) {
-        alert("você é criança");
-
-    } else if (idades >= 13 && idades <= 17) {
-        alert("Você é um adolecente")
-    }
-
-    else if (idades >= 18 && idades <= 59) {
-        alert("Você é um adulto")
-    }
-    else {
-        alert("Você é idoso");
-    }
+alert(`O valor total da conta é: R$${valorConta} Com mais 10% do garçom (não obrigatório) é: R$${gorjeta}.`);
 }
 
-// Questão 2
+// Questão 2. Desenvolver um programa que faça duas perguntas: o valor referente às horas atuais e 
+// o valor referente aos minutos atuais. Exemplo, se agora são 09:35h o usuário deverá 
+// informar como resposta às horas atuais o valor 09 e como resposta aos minutos atuais 
+// o valor 35. Em seguida o programa deverá apresentar como resposta quantos minutos 
+// já se passaram desde às 00:00h deste dia.
 
-function estoque(){
-let entrada = parseInt(prompt("Digite quantidade de produtos que entraram no estoque"));
-let saida = parseInt(prompt("Digite quantidade de produtos que sairam do estoque"));
-let estoq = 100;
-let total = ((estoq + entrada) - saida);
+function horasRelogio(){
+    let horas = parseFloat(prompt("Digite as horas com dois digítos"));
+    let minutos = parseFloat(prompt("Digite os minutos com dois digítos"));
 
-alert(total);
+    alert(`São ${horas}:${minutos}.`);
 
 }
 
-//Questão 3
-function validasenha() {
-    // Define a senha correta que o usuário deve digitar para ter acesso
-    const senhaCorreta = "senai123";
+// Questão 3. Desenvolver um programa que pergunte ao usuário o seu peso (em quilos) e sua altura 
+// (em metros). Ao final o programa deverá exibir na tela para o usuário o valor do peso 
+// informado em gramas e a altura em centímetros.
 
-    // Inicia o contador de tentativas em 0
-    let tentativas = 0;
+function pesoAltura(){
+    let peso = parseFloat(prompt("Digite seu peso em kg"));
+    let altura = parseFloat(prompt("Digite sua altura em metros"));
+    let pesoEmGramas = (peso * 1000);
+    let alturaEmcentimetros = (altura * 100)
 
-    // Define o número máximo de tentativas permitidas
-    const maxTentativas = 3;
-
-    // Enquanto o número de tentativas for menor que o máximo permitido
-    while (tentativas < maxTentativas) {
-
-        // Solicita ao usuário que digite a senha
-        const senha = prompt("Por favor, digite a senha:");
-
-        // Verifica se a senha digitada é igual à senha correta
-        if (senha === senhaCorreta) {
-            // Se a senha estiver correta, exibe mensagem de acesso permitido
-            alert("Acesso permitido");
-
-            // Sai do laço imediatamente (não precisa mais pedir senha)
-            break;
-        } else {
-            // Se a senha estiver errada, incrementa o número de tentativas
-            tentativas++;
-
-            // Calcula quantas tentativas ainda restam
-            const tentativasRestantes = maxTentativas - tentativas;
-
-            // Se ainda houver tentativas disponíveis, exibe mensagem informando isso
-            if (tentativasRestantes > 0) {
-                alert(`Senha incorreta. Você tem ${tentativasRestantes} tentativa(s) restante(s).`);
-            }
-        }
-    }
-
-    // Após sair do laço, verifica se o número de tentativas atingiu o limite
-    if (tentativas === maxTentativas) {
-        // Se sim, o acesso é bloqueado
-        alert("Acesso bloqueado");
-    }
+    alert(`Seu peso em gramas é: ${pesoEmGramas}g e sua alura em centimetros é:${alturaEmcentimetros}cm.`);
 }
 
+// Questão 4. Desenvolver um programa que pergunte ao usuário o seu peso e sua altura. Ao final o 
+// programa deverá exibir na tela o valor do índice de massa corporal desta pessoa (IMC).
+// • Fórmula: IMC = peso / altura2
+// • Obs: peso em quilos e altura em metros
 
-//Questão 4
-function verificarPrimo() {
-    // Solicita ao usuário que digite um número e converte para inteiro
-    let numero = parseInt(prompt("Digite um número: "))
-    let primo = true // Assume inicialmente que o número é primo
-    // Verifica se o número é menor que 2 (não pode ser primo)
-    if (numero < 2) { primo = false  }     
-    else {
-
-        // Verifica divisores de 2 até a raiz quadrada do número
-        for (let i = 2; i <= Math.sqrt(numero); i++) 
-
-            // Se encontrar algum divisor exato, não é primo
-           { if (numero % i === 0) {primo = false 
-            break } } // Interrompe o laço, pois já sabemos que não é primo
-            
-        
-    }
-
-    // Exibe o resultado ao usuário
-    if (primo) {
-        alert(numero + " é um número primo.")
-    } else {
-        alert(numero + " não é um número primo.")
-    }
-}
-
-//Questão 5
-function fila(){
-    let filas = ["Carlos","Maria","João"];    
-    filas.push("Angela");
-    alert(`A fila atual é: ${filas}`);
-}
-
-// Questão 6 (avaliando com if um por um )
-// function notas(){
-//     let avaliacao = parseInt(prompt("Digite sua nota para nossa avaliação"))
+function imc(){
+    let peso = parseFloat(prompt("Digite seu peso em kg"));
+    let altura = parseFloat(prompt("Digite sua altura em metros"));
+    let resultadoImc = peso / (altura * altura);
     
 
-//    if (isNaN(avaliacao) || avaliacao < 0 || avaliacao > 10) {
-//         alert("Nota inválida. Digite um número de 0 a 10.");
-//         return;
-//    }
-
-//         switch (true) {
-//         case (avaliacao >= 0 && avaliacao<= 4):
-//             alert("avaliacao: Ruim ");
-//             break;
-//         case (avaliacao >= 5 && avaliacao<= 7):
-//             alert("avaliacao: Regular");
-//             break;
-//         case (avaliacao >= 8 && avaliacao<= 10):
-//             alert("avaliacao: Ótima");
-//             break;
-
-
-    
-//     } 
-// }  
-
-//     // Questão 6
-// function notas() {
-//     // Cria um array vazio para armazenar as 10 notas
-//     let avaliacoes = [];
-
-//     // Laço para coletar 10 notas do usuário
-//     for (let i = 0; i <= 10; i++) {
-//         let nota = parseInt(prompt(`Digite a nota ${i + 1} (de 0 a 10):`));
-
-//         // Validação básica
-//         if (isNaN(nota) || nota < 0 || nota > 10) {
-//             alert("Nota inválida. Digite um número entre 0 e 10.");
-//             i--; // Refaz essa iteração
-//             continue;
-//         }
-
-//         // Adiciona a nota ao array1
-//         avaliacoes.push(nota);
-//     }
-
-//     // Laço para avaliar cada nota com switch
-//     for (let i = 0; i < avaliacoes.length; i++) {
-//         let avaliacao = avaliacoes[i];
-
-//         switch (true) {
-//             case (avaliacao >= 0 && avaliacao <= 4):
-//                 alert(`Nota ${avaliacao}: Ruim`);
-//                 break;
-//             case (avaliacao >= 5 && avaliacao <= 7):
-//                 alert(`Nota ${avaliacao}: Regular`);
-//                 break;
-//             case (avaliacao >= 8 && avaliacao <= 10):
-//                 alert(`Nota ${avaliacao}: Ótima`);
-//                 break;
-//             default:
-//                 alert(`Nota ${avaliacao}: Inválida`);
-//                 break;
-//         }
-//     }
-// }
-
-//Questão 7
-function mediaNotas(){
-
-    let totalalunos = [];
-
-    // Laço para coletar 10 notas do usuário
-    for (let i = 0; i < 5; i++) {
-        let aluno = prompt(`Digite o aluno  ${i + 1} de recuperação:`);
-
-
-        for (let i = 0; i < 3; i++) {
-        let notas = parseInt(prompt(`Digite a notas do${i + 1}° nota do aluno ${i + 1}:`));
-
-        // Adiciona a nota ao array1
-        totalalunos.push(aluno);
-        totalalunos.push(notas);
-    }
-    
-}
-alert(`os alunos e suas notas:" ${totalalunos}`);
+    alert(`Seu indice de imc é: ${resultadoImc.toFixed(2)}.`);
 }
 
-//----------------------------------------------------------------------
+// Questão 5. Fazer um algoritmo que pergunte dois números e ao final apresente os seguintes 
+// valores: a soma dos dois números, a subtração do primeiro pelo segundo número, a 
+// subtração do segundo pelo primeiro número, a multiplicação entre os dois números, a 
+// divisão do primeiro pelo segundo número, e também o resto da divisão do primeiro 
+// pelo segundo número.
+
+function multiplasContas() {
+let num1 = parseFloat(prompt("Digite o primeiro numero para realizar suas operações"));
+let num2 = parseFloat(prompt("Digite o segundo numero para realizar suas operações"));
+let soma = (num1 + num2);
+let subtração = (num1 - num2);
+let subtraçãoInvertida = (num2 - num1);
+let multiplicação = (num1 * num2);
+let divisão = (num1 / num2);
 
 
+document.writeln(`O resultado da soma desses numeros é: ${soma}.<br>`);
+document.writeln(`O resultado da subtração desses numeros é: ${subtração}.<br>`);
+document.writeln(`O resultado da subtração do segundo numero pelo primeiro é:${subtraçãoInvertida}.<br>`);
+document.writeln(`O resultado da multiplcação desses numeros é: ${multiplicação}.<br>`);
+document.writeln(`O resultado da divisão desses numeros é: ${divisão}.<br>`);
+}
+
+// Questão 6. Fazer um algoritmo que pergunte o nome de um vendedor, o seu salário fixo e o total 
+// de vendas efetuadas por ele no mês (em dinheiro). Sabendo que este vendedor ganha 
+// 15% de comissão sobre suas vendas efetuadas, exibir ao final o seu nome, o salário 
+// fixo, a comissão e o salário completo (fixo + comissão sobre vendas) no final do mês.
+
+function comissão(){
+    let nome = prompt("Digite o Seu nome:");
+    let salarioFixo = parseFloat(prompt("Digite o valor do seu salario fixo"));
+    let vendas = parseFloat(prompt("Digite quanto vendeu esse mês"));
+    let comissao = (vendas * 0.15);
+    let salariocomissao = salarioFixo + vendas + (vendas * 0.15);
+
+    document.writeln(`nome: ${nome}<br>Salário fixo: ${salarioFixo}<br> Sua comissão este mês: ${comissao}<br>Salário final: ${salariocomissao}`);
+}
+
+// Questão 7. A Loja Mamão com Açúcar está vendendo seus produtos em até 10 prestações sem 
+// juros. Faça um algoritmo que pergunte um valor de uma compra, o número de 
+// prestações escolhidas e apresente como resultado o valor das prestações.
+
+function mamaoComAcucar(){
+    let valorProduto = parseFloat(prompt("Digite o valor do produto"));
+    let valorParcela = (valorProduto / 10);
+
+     document.writeln(`Sua compra parcelada ficou:<br> 10 x de: R$${valorParcela}.`);
     
-        
 
-//         // Adiciona a nota ao array1
-//       //  totalalunos.push(notas);
-// }
+}
 
-// alert(`${totalalunos}`);
+// Questão 8. Fazer um algoritmo que receba o preço de custo de um produto e mostre como 
+// resposta o valor de venda. Sabe-se que o preço de custo receberá um acréscimo de 
+// acordo com um percentual informado pelo usuário.
 
+function valorVenda(){
+    let valorCompra = parseFloat(prompt("Digite o valor de custo do produto"));
+    let valorPercentual = parseFloat(prompt("Digite o valor do percentual de 0 a 100 para acrecimo"));
 
+    let percentual = (valorPercentual / 100);
+    let valorFinal =  valorCompra + (valorCompra * percentual)
 
-// }
+    document.writeln(`O valor da venda do produto será: R$${valorFinal}.`);
+}
+
+// Questão 9. Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e 
+// mostre-a expressa apenas em dias. Obs: Considere os anos com 365 dias e os meses 
+// com 30 dias.
+
+function quantidadeDeDias(){
+        let idade = parseInt(prompt("digite sua idade"));
+        let meses = parseInt(prompt("mes do seu nascimento"));
+        let dias = parseInt(prompt("dia do seu nascimento"));
+
+        let anosEmDias = (idade * 365);
+        let mesesEmDias = (meses * 30);
+        let totalDias = (anosEmDias + mesesEmDias + dias);
+       
+            document.writeln(`Você ja viveu: ${totalDias} dias nessa Terra.`);
+}
+
+// Questão 10. Escreva um algoritmo pergunte o número total de eleitores de um município, o 
+// número de votos brancos, nulos e válidos e apresente como resposta o percentual que 
+// cada um representa em relação ao total de eleitores.
