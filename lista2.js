@@ -185,11 +185,11 @@ function mediaNotas(){
 
     // Laço para coletar 10 notas do usuário
     for (let i = 0; i < 5; i++) {
-        let aluno = prompt(`Digite o alunot de recuperação ${i + 1}:`);
+        let aluno = prompt(`Digite o aluno  ${i + 1} de recuperação:`);
 
 
         for (let i = 0; i < 3; i++) {
-        let notas = parseInt(prompt(`Digite as notas dos alunos recuperação ${i + 1}:`));
+        let notas = parseInt(prompt(`Digite a notas do${i + 1}° nota do aluno ${i + 1}:`));
 
         // Adiciona a nota ao array1
         totalalunos.push(aluno);
