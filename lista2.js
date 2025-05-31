@@ -133,3 +133,31 @@ function quantidadeDeDias(){
 // Questão 10. Escreva um algoritmo pergunte o número total de eleitores de um município, o 
 // número de votos brancos, nulos e válidos e apresente como resposta o percentual que 
 // cada um representa em relação ao total de eleitores.
+
+function totalVotos(){
+    let votos    = parseInt(prompt("digite o total de votos computados"));
+    let validos  = parseInt(prompt("digite o total de votos validos"));
+    let Brancos  = parseInt(prompt("digite o total de votos brancos"));
+    let Nulos    = parseInt(prompt("digite o total de votos nulos"));
+
+    let porcentagem = (1);
+
+    let porcentagemBrancos1 = (Brancos * 100); //5000
+    let porcentagemBrancos2 = (votos * porcentagem);//200x
+    let porcentagemBrancos = (porcentagemBrancos1 / porcentagemBrancos2);
+    
+
+    let porcentagemValidos1 = (validos * 100); //5000
+    let porcentagemValidos2 = (votos * porcentagem);//200x
+    let porcentagemValidos = (porcentagemValidos1 / porcentagemValidos2);
+
+
+    
+let porcentagemNulos1 = (Nulos * 100); //5000
+    let porcentagemNulos2 = (votos * porcentagem);//200x
+    let porcentagemNulos = (porcentagemNulos1 / porcentagemNulos2);
+    
+
+    document.writeln(`Votos Válidos: ${porcentagemValidos}% <br> Votos Brancos: ${porcentagemBrancos}% <br> Votos Nulos: ${porcentagemNulos}%`);
+}
+    
