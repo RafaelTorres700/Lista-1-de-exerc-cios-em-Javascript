@@ -1,29 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>teste1</title>
-    <link rel="stylesheet" href="style.css">
-    <img src="../testejavascript/IMG/Imagem do WhatsApp de 2025-05-30 à(s) 10.57.00_3b163295.jpg" alt="cadspm">
-</head>
-<body>
-    <h1>Lista 1 de exercícios em Javascript, Torres
-</h1>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>teste3</title>
+    <link rel="stylesheet" href="style.css" />
+    <img
+      src="../testejavascript/IMG/Imagem do WhatsApp de 2025-05-30 à(s) 10.57.00_3b163295.jpg"
+      alt="cadspm"
+    />
+  </head>
+  <body>
+    <h1>Torres</h1>
+    <h1>Lista 3 de exercícios em Javascript</h1>
+
+    <h2>Questão 1: Cálculo da Área de um Círculo</h2>
+
+    <input type="number" id="raio" placeholder="Digite o valor do raio" />
+
+    <button onclick="calcularArea()">Calcular Área</button>
+
+    <p id="resultado"></p>
+    <!-- Aqui será exibido o resultado -->
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2>Questão 2: Salário líquido do professor com desconto de 15% do INSS</h2>
+
+    <input type="number" id="horaAul" placeholder="Valor da hora-aula" />
+    <input type="number" id="horaTrab" placeholder="Horas trabalhadas" />
+
+    <button onclick="calcularSalario()">Calcular salário do professor</button>
+
+    <p id="resultadosalario"></p>
+    <!-- Aqui será exibido o resultado -->
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2>Questão 3: Acrécimo de 30% e desconto de 25%</h2>
+
+    <input type="number" id="acrescentar" placeholder="Valor para acrécimo" />
+    <input type="number" id="descontar" placeholder="Valor para o desconto" />
+
+    <button onclick="calcularacrescimoEDesconto()">
+      Calcular acrécimo e desconto
+    </button>
+
+    <p id="resultado do acrescimo"></p>
+    <!-- Aqui será exibido o resultado -->
+    <p id="resultado do desconto"></p>
+    <!-- Aqui será exibido o resultado -->
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2>Questão 4: Media Aritmetica</h2>
+
+    <input type="number" id="num1" placeholder="Valor 01" />
+    <input type="number" id="num2" placeholder="Valor 02" />
+    <input type="number" id="num3" placeholder="Valor 03" />
+    <input type="number" id="num4" placeholder="Valor 04" />
+
+    <button onclick="mediaAritmetica()">Calcular acrécimo e desconto</button>
+
+    <p id="mediaaritimetica"></p>
+    <!-- Aqui será exibido o resultado -->
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2>Questão 5: Calcula volume</h2>
+
+    <input type="number" id="Raio" placeholder="Valor do raio" />
+    <input type="number" id="Altura" placeholder="Valor da altura" />
+
+    <button onclick="calculaVolume()">Calcular volume da lata</button>
+
+    <p id="calculadordeVolume"></p>
+    <!-- Aqui será exibido o resultado -->
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2>Questão 6: Troca de valores</h2>
+
+    <input type="number" id="a" placeholder="Valor A" />
+    <input type="number" id="b" placeholder="Valor B" />
+    <button onclick="trocaValor()">troca A por B</button>
+    <p id="trocaporb"></p>
+    <!-- Aqui será exibido o resultado -->
+
+<p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2>Questão 7:Valor da hipotunusa</h2>
+
+    <input type="number" id="cateto1" placeholder="valor cateto 1" />
+    <input type="number" id="cateto2" placeholder="Valor cateto 2" />
+    <button onclick="valorhipotenusa()">calcula Hipotenusa</button>
+    <p id="resultado hipotenusa"></p>
+    <!-- Aqui será exibido o resultado -->
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2>Questão 8: Calculos do retangulo</h2>
+
+    <input type="number" id="base" placeholder="valor da base" />
+    <input type="number" id="altura" placeholder="Valor da altura" />
+    <button onclick="retangulo()">calculos do retangulo</button>
+    <p id="resultadoretangulo"></p>
+    <p id="resultadoretangulo2"></p>
+    <p id="resultadoretangulo3"></p>
 
 
-    <button onclick="identificacao()">Questão 01</button>
-    <button onclick="valoresa()">Questão 02 - a</button>
-    <button onclick="valoresb()">Questão 02 - b</button>
-    <button onclick="valoresc()">Questão 02 - c</button>
-    <button onclick="anteriorposterior()">Questão 03</button>
-    <button onclick="acrecimosalario()">Questão 04</button>
-    <button onclick="convtemperatura()">Questão 05</button>
-    <button onclick="media()">Questão 06</button>
-    <button onclick="kmporlitro()">Questão 07</button>
-    <button onclick="numvariados()">Questão 08</button>
-    <button onclick="atraso()">Questão 09</button>   
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
 
-<script src="lista3.js"></script>
-</body>
+    <h2>Questão 9: 10º termo de uma PA</h2>
+
+<input type="number" id="primeiroTermo" placeholder="Digite o 1º termo (a1)">
+<input type="number" id="razao" placeholder="Digite a razão (r)">
+
+<button onclick="calcularDecimoTermo()">Calcular 10º termo</button>
+
+<p id="resultadoPA"></p>
+
+
+
+<p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+<h2>Questão 10: 5º termo de uma PG</h2>
+
+<input type="number" id="pgPrimeiroTermo" placeholder="Digite o 1º termo (a1)">
+<input type="number" id="pgRazao" placeholder="Digite a razão (r)">
+
+<button onclick="calcularQuintoTermoPG()">Calcular 5º termo</button>
+
+<p id="resultadoPG"></p>
+
+
+
+    <script src="lista3.js"></script>
+  </body>
 </html>
