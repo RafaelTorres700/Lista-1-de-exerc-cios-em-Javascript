@@ -3,17 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>teste1</title>
+    <title>lista4</title>
     <link rel="stylesheet" href="style.css">
     <img src="../testejavascript/IMG/Imagem do WhatsApp de 2025-05-30 à(s) 10.57.00_3b163295.jpg" alt="cadspm">
 </head>
 <body>
-    <h1>Lista 1 de exercícios em Javascript, Torres
-</h1>
+    <h1>Torres</h1>
+    <h1>Lista 4 de exercícios em Javascript</h1>
 
+    <h2>Questão 01: metade de 20</h2>
 
-    <button onclick="identificacao()">Questão 01</button>
+<input type="number" id="m20" placeholder="Digite um valor" />
+    <button onclick="maiorQueVinte()">Maior que 20</button>
+    <p id="maiorquevinte"></p>
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2>Questão 02: Qual a capital do Brasil</h2>
+
+<input type="text" id="capital" placeholder="Capital do Brasil" />
+
+<button onclick="capitalBrasil()">Capital do Brasil</button>
+
+<p id="capitaldobrasil"></p>
+    <!-- Aqui será exibido o resultado -->
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2>Questão 03: Par ou impar</h2>
+
+    <input type="number" id="parimpar" placeholder="par ou impar" />
     
+
+    <button onclick="parimpar()">Diga se é par ou impar</button>
+
+    <p id="resultadoparimpar"></p>
+    <!-- Aqui será exibido o resultado -->
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+   <h2>Questão 04: divisível por 4 ou 5</h2>
+
+<input type="number" id="entradaNumero" placeholder="Digite um número" />
+
+<button onclick="calculaQuatroCinco()">Verificar divisibilidade</button>
+
+<p id="resultado"></p>
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    
+    <!-- Entradas de notas -->
+     <h2>Questão 05: Notas se aprovado</h2>
+
+<input type="number" id="nota1" placeholder="Nota 1" step="0.01" /><br><br>
+<input type="number" id="nota2" placeholder="Nota 2" step="0.01" /><br><br>
+<input type="number" id="nota3" placeholder="Nota 3" step="0.01" /><br><br>
+<input type="number" id="nota4" placeholder="Nota 4" step="0.01" /><br><br>
+
+<button onclick="calcularMedia()">Calcular Média</button>
+
+<p id="resultado"></p>
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2> Questão 6: Diferença entre o maior e o menor valor</h2>
+
+<!-- Entradas -->
+<input type="number" id="valor1" placeholder="Digite o primeiro número"><br><br>
+<input type="number" id="valor2" placeholder="Digite o segundo número"><br><br>
+
+<!-- Botão -->
+<button onclick="calcularDiferenca()">Calcular Diferença</button>
+
+<!-- Resultado -->
+<p id="resultados"></p>
+
+
+
+
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2>Questão 07: Diga se o numero é positivo </h2>
+
+    <input type="number" id="valor" placeholder="Digite um número">
+<button onclick="numeropositivo()">Transformar em Positivo</button>
+
+<p id="resultado"></p>
+    <!-- Aqui será exibido o resultado -->
+
+
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2>Questão 08: Diga se está entre 1 e 10</h2>
+
+    <input type="number" id="umadez" placeholder="entre 1 e 10" />
+    
+    <button onclick="deumadez()">diga se numero está entre um e dez</button>
+
+    <p id="Resultado"></p>
+    <!-- Aqui será exibido o resultado -->
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2>Questão 09: Numero positivo negativo ou nulo</h2>
+
+    <input type="number" id="valor" placeholder="Digite um número">
+    <button onclick="verificarNumero()">Verificar</button>
+
+    <!-- Aqui será exibido o resultado -->
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2>Questão 10: Verificar se o segundo número é divisor do primeiro</h2>
+
+    <label>Digite o primeiro número:</label><br>
+<input type="number" id="numero1"><br><br>
+
+<label>Digite o segundo número:</label><br>
+<input type="number" id="numero2"><br><br>
+
+<button onclick="verificarDivisor()">Verificar</button>
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2>Questão 11: Mostrar o algarismo das centenas de um número com 3 dígitos</h2>
+
+    <input type="number" id="numero" placeholder="Ex: 123" /><br><br>
+    <button onclick="mostrarCentena()">Verificar Centena</button>
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2>Questão 12: Informe 5 números inteiros</h2>
+
+    <input type="number" id="n1" placeholder="Número 1"><br><br>
+<input type="number" id="n2" placeholder="Número 2"><br><br>
+<input type="number" id="n3" placeholder="Número 3"><br><br>
+<input type="number" id="n4" placeholder="Número 4"><br><br>
+<input type="number" id="n5" placeholder="Número 5"><br><br>
+
+<button onclick="verificarMaiorMenor()">Verificar</button>
+
+    <p>
+      --------------------------------------------------------------------------------------------------
+    </p>
+
+    <h2>Questão 13: Digite 3 valores para ordenar em ordem crescente</h2>
+
+    <input type="number" id="a" placeholder="Valor A"><br><br>
+<input type="number" id="b" placeholder="Valor B"><br><br>
+<input type="number" id="c" placeholder="Valor C"><br><br>
+
+<button onclick="ordenarValores()">Ordenar</button>
+
 
 <script src="lista4.js"></script>
 </body>
